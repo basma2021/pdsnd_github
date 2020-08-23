@@ -29,7 +29,7 @@ def check_input(input_str,input_type): # To check user input and validate
                 if input_type == 3:
                     print("Sorry, you should select from list only --(all or sunday,monday,tuesday,wednesday,thursday ,friday, saturday )")
         except ValueError:
-            print("-----sorry ---- your input is wrong")
+            print("--sorry -- your input is wrong")
     return input_read
 
 def get_filters():
