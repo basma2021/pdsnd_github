@@ -6,13 +6,13 @@ CITY_DATA = {'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv'}
 
-def check_input(input_str,input_type): # To check user input and validate 
+def check_input(input_str,input_type): # To check user input and validate
     """
    check user input validity
    input_str: input from the user
    input_type:type of input from user: 1 = city, 2 = month, 3 = day
    """
-    while True:  # To keep ask user to put input till correct answer 
+    while True:  # To keep ask user to put input till correct answer
         input_read=input(input_str)
         try:
             if input_read.lower() in ['chicago','new york city','washington'] and input_type == 1:
@@ -75,7 +75,7 @@ def load_data(city, month, day):
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
 
-    # if applicable filter by month 
+    # if applicable filter by month
     if month != 'all':
         # use the index of the months list to get related int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
@@ -84,7 +84,7 @@ def load_data(city, month, day):
           # filter by month to create new dataframe
         df = df[df['month'] == month]
 
-    # if applicable filter by day of week 
+    # if applicable filter by day of week
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
@@ -187,7 +187,7 @@ def user_stats(df,city):
     print('-'*40)
 
 
-          
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -197,12 +197,12 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
-       
+
         records = input('\nWould you like to see the first 5 records of the trip type(yes) or to stop (no).\n')
         if records.lower() =='yes':
-          print(df.head(5)) 
+          print(df.head(5))
 
-    
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
@@ -210,4 +210,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
