@@ -43,7 +43,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = check_input(" Please select city (chicago , new york city , washington) :",1).lower()
+    city = check_input(" Please select the city (chicago , new york city , washington) :",1).lower()
     # get user input for month (all, january, february, ... , june)
     month = check_input("Please select Month (all or  january, ... june)?", 2)
     # get user input for day of week (all, monday, tuesday, ... sunday)
@@ -106,7 +106,7 @@ def time_stats(df):
     # display the most common day of week
     popular_day_of_week = df['day_of_week'].mode()[0]
 
-    print('Most Popular Day Of Week:', popular_day_of_week)
+    print('Most Day Of Week:', popular_day_of_week)
 
     # display the most common start hour
     popular_common_start_hour = df['hour'].mode()[0]
