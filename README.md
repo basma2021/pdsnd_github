@@ -1,8 +1,9 @@
 ### Date created
-Include the date you created this project and README file.
+This project and README file created on 23-08-2020
 
 ### Project Title
-Replace the Project Title
+Bikeshare project for Programming for Data Science Nanodegree Program
+
 
 ### Description
 Describe what your project is about and what it does
